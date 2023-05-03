@@ -35,7 +35,7 @@ if upl_file is not None:
     yolo_weights = 'last_8n_e120.pt'
     import yolov8_tracking.track as track
     
-    opt = track.parse_opt(yolo_weights,upl_file)
+    opt = track.parse_opt(yolo_weights,io.BytesIO(upl_file))
     fstr = track.main(opt)
     if(len(fstr)) != 0:
         import treatment as obr
@@ -58,6 +58,7 @@ if t is not '':
         st.video(vd)
         yolo_weights = 'last_8n_e120.pt'
         import yolov8_tracking.track as track
+
         opt = track.parse_opt(yolo_weights,p)
         fstr = track.main(opt)
         
