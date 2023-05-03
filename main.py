@@ -28,14 +28,14 @@ st.write('Загрузка видеоролика (из репозитория)'
 
 
 t, www = load_vid()
-if www is not '':
-    st.write(www)
+
+if upl_file is not None:
     turniket = 470
-    st.video(www)
-    #st.video(vd)
+    st.video(upl_file)
     yolo_weights = 'last_8n_e120.pt'
     import yolov8_tracking.track as track
-    opt = track.parse_opt(yolo_weights,www)
+    
+    opt = track.parse_opt(yolo_weights,upl_file)
     fstr = track.main(opt)
     if(len(fstr)) != 0:
         import treatment as obr
