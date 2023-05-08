@@ -2,7 +2,7 @@ import io
 import streamlit as st
 import pandas as pd
 import numpy as np
-
+'''
 turniket_dict =  {1:470,2:470,3:470,4:910,5:470,\
                   6:580,7:580,8:470,9:470,10:470,\
                   11:470,12:470,13:470,14:580,15:470,\
@@ -77,4 +77,4 @@ if t is not '':
             df.loc[0] = [1,0,0,0,0]
             st.write(df)
 
-
+'''
